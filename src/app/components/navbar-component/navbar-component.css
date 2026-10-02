@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  boxizing: border-box;
+}
+
+.main-nav {
+  height: 80px;
+  gap: 45px;
+}
+
+.left-side {
+  width: 35%;
+  gap: 10px;
+}
+
+.center-side {
+  width: 30%;
+}
+
+.right-side {
+  width: 30%;
+}
+
+.logo-side {
+  width: 150px;
+  background-color: lightcoral;
+  margin-left: 10%;
+}
+
+.search {
+    width: 500px;
+    background-color:#2b425b
+}
+
+.custom-search-group {
+  width: 100%;
+  height: 40px;
+}
+
+.custom-dropdown-btn {
+  color: #4a6584;
+  background-color: #fff;
+  border-color: #ced4da;
+  font-weight: 500;
+}
+.custom-dropdown-btn:hover,
+.custom-dropdown-btn:focus,
+.custom-dropdown-btn:active {
+  background-color: #f8f9fa;
+  color: #4a6584;
+  border-color: #ced4da;
+
+}
+
+.cetegory-dropdown {
+    width: 170px
+}
+
+.custom-dropdown-menu {
+  min-width: 250px;
+  padding: 12px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.custom-dropdown-menu .dropdown-item {
+  color: #4a6584;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.custom-dropdown-menu .dropdown-item:hover,
+.custom-dropdown-menu .dropdown-item.active {
+  background-color: #dbe5ed;
+  color: #2b425b;
+}
+
+.custom-search-input {
+  border-left: none;
+}
+.custom-search-input::placeholder {
+  color: #adb5bd;
+}
+
+.input-group-text-divider {
+  border-top: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+  background-color: #fff;
+  color: #ced4da;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+}
+
+/*==============================Hover drop down==================================
+*/
+.hover-dropdown {
+  position: relative;
+
+}
+
+.hover-dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Prevents gaps that break hover */
+}
+
+/* Custom styling for the dropdown menu items */
+.hover-dropdown .dropdown-menu {
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 10px 0;
+  min-width: 180px;
+}
+
+.hover-dropdown .dropdown-item {
+  color: #4a6584;
+  padding: 6px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hover-dropdown .dropdown-item:hover {
+  background-color: #f1f5f9;
+  color: orange;
+  
+}
+
