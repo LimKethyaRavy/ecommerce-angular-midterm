@@ -1,0 +1,152 @@
+/* Container aligning sidebar and hero content side-by-side */
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 70px); /* Adjust based on navbar height */
+  background-color: #f8f9fa;
+}
+
+/* Let the sidebar component fit its natural width */
+app-sidebar-components {
+  flex-shrink: 0;
+}
+
+/* 3-column Hero Layout next to the sidebar */
+.hero-container {
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+  gap: 20px;
+  flex: 1;
+  padding: 20px;
+}
+
+/* Sub-category links panel */
+.sub-category-menu {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.sub-category-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-category-menu li a {
+  display: block;
+  padding: 8px 20px;
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sub-category-menu li a:hover {
+  background-color: #f1f3f5;
+  color: #0d6efd;
+}
+
+
+.hero-container{
+  /* background-color: #e2f0d9;  */
+  border-radius: 12px;
+  width: 400px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.slider-section {
+    width: 55%;
+    height: 500px;
+    margin-left: 10%;
+    
+}
+
+.child-card {
+    width: 450px;
+    height: 560px;
+    background-color: #0d6efd;
+}
+
+
+.banner-text .tag {
+  color: #2b8a3e;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.banner-text h1 {
+  font-size: 2.2rem;
+  color: #1a252c;
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-primary {
+  background-color: #ff8000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: none;
+  color: #495057;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Right Side Promo Panel */
+.promo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.promo-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.discount {
+  font-size: 0.75rem;
+  color: #ff8000;
+  font-weight: 700;
+}
+
+.promo-card h3 {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #212529;
+}
+
+.btn-action {
+  background: #2b3a4a;
+  color: #ffffff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}

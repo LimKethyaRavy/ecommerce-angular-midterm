@@ -1,0 +1,100 @@
+/* Container for the narrow sidebar */
+.sidebar-container {
+  width: 50px;
+  background-color: #ffffff;
+  border-right: 1px solid #e9ecef;
+  height: 100%;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  gap: 12px;
+}
+
+/* Outer Item Wrapper (Anchor point for positioning) */
+.icon-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.fa-solid {
+    color: lightslategray;
+}
+
+.fa-solid:hover {
+    color: blue;
+}
+
+/* Main Icon Button */
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: #6c757d;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-item:hover .icon-btn {
+  color: #0d6efd;
+  background-color: #f0f4ff;
+}
+
+/* Flyout Submenu Panel */
+.flyout-panel {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Anchor directly to the right edge of the icon bar */
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+/* Show flyout on hover */
+.icon-item:hover .flyout-panel {
+  display: block;
+}
+
+/* Header & Sub-item Links inside Flyout */
+.flyout-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #212529;
+  padding: 0 16px 8px 16px;
+  margin: 0;
+  border-bottom: 1px solid #f1f3f5;
+  text-transform: uppercase;
+}
+
+.flyout-list {
+  list-style: none;
+  padding: 8px 0 0 0;
+  margin: 0;
+}
+
+.flyout-link {
+  display: block;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  color: #495057;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.flyout-link:hover {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+}
