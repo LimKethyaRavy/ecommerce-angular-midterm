@@ -1,25 +1,43 @@
 <section class="container-xl py-4 px-3 px-md-4">
-  <h2 class="fw-bold title-color mb-1">Best Sellers</h2>
-  <p class="text-muted-blue mb-4">Special products in this month.</p>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
+   <div class="section-head d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
 
-    @for (products of product; track product.id) {
+  <!-- left: title + subtitle -->
+  <div>
+    <h2 class="fw-bold title-color mb-1">Best Sellers</h2>
+    <p class="text-muted-blue mb-0">Special products in this month.</p>
+  </div>
+
+  <!-- right: tabs -->
+  <ul class="filter-tabs list-unstyled d-flex gap-4 mb-0">
+    <li><a href="#" class="active">All</a></li>
+    <li><a href="#">Best seller</a></li>
+    <li><a href="#">Most viewed</a></li>
+    <li><a href="#">Top Brands</a></li>
+  </ul>
+
+</div>
+
+
+  <hr>
+
+  <div class="row g-3">
+
+    @for (product of products; track product.id) {
 
         
-      <div class="col">
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
 
         <div class="product-card">
           <span class="badge-discount">-{{ product.discount }}%</span>
 
           <div class="card-actions">
-            <button type="button"><i class="bi bi-lightning-charge-fill"></i></button>
-            <button type="button"><i class="bi bi-heart-fill"></i></button>
-            <button type="button"><i class="bi bi-arrow-left-right"></i></button>
-            <button type="button"><i class="bi bi-eye-fill"></i></button>
+            <button type="button"><i class="fa-solid fa-heart"></i></button>
+           
           </div>
 
-          <div class="product-img">
+          <div class="description">
+         <div class="product-img">
             <img [src]="product.image" [alt]="product.name" />
           </div>
 
@@ -35,14 +53,15 @@
             <span class="price-now">${{ product.price }}</span>
             <del class="price-old">${{ product.oldPrice }}</del>
           </div>
+          </div>
+ 
 
+          <div class="main-btn">
           <button type="button" class="btn-cart">Add To Cart</button>
 
-          <ul class="features">
-            @for (f of product.features; track f) {
-              <li>{{ f }}</li>
-            }
-          </ul>
+          </div>
+
+        
         </div>
 
       </div>

@@ -3,7 +3,7 @@
 .product-card {
   position: relative;
   height: 100%;
-  padding: 16px;
+  /* padding: 16px; */
   background: #fff;
   border: 1px solid #d5e0e8;
   border-radius: 4px;
@@ -15,7 +15,7 @@
   box-shadow: 0 4px 14px rgba(61, 90, 140, 0.12);
 }
 
-/* discount badge */
+
 .badge-discount {
   position: absolute;
   top: 14px;
@@ -29,7 +29,7 @@
   z-index: 2;
 }
 
-/* hover action buttons (top right) */
+
 .card-actions {
   position: absolute;
   top: 14px;
@@ -66,6 +66,35 @@
 .card-actions button:hover {
   background: #3d5a8c;
   color: #fff;
+}
+
+/* the thin line under the header */
+.section-head {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dde3ea;
+}
+
+.filter-tabs a {
+  color: #8fa0c0;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.filter-tabs a:hover {
+  color: #3d5a8c;
+}
+
+
+.filter-tabs a.active {
+  color: #3d5a8c;
+  font-weight: 700;
+}
+
+
+@media (max-width: 575.98px) {
+  .filter-tabs { gap: 14px !important; }
+  .filter-tabs a { font-size: 14px; }
 }
 
 /* image */
@@ -113,6 +142,15 @@
   letter-spacing: 1px;
 }
 
+.title-color {
+    color: rgb(57, 57, 161);
+}
+
+.text-muted-blue {
+    color: rgb(57, 57, 161);
+}
+
+
 .reviews {
   color: #8fa0c0;
   font-size: 13px;
@@ -137,9 +175,19 @@
   color: #8fa0c0;
 }
 
+.description {
+    padding: 10px;
+}
+
+.main-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+} 
 /* add to cart */
 .btn-cart {
-  width: 100%;
+  width: 250px;
   padding: 9px 0;
   background: #fff;
   color: #3d5a8c;

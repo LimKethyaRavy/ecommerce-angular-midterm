@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class BestSellerComponents {
 
-  @Input() product: any;
+  @Input() products: any;
 }
