@@ -1,27 +1,26 @@
 <aside class="sidebar-container">
   <div class="icon-list">
-    <!-- Loop through categories -->
+  
     @for (category of categories; track category.id) {
       <div class="icon-item">
-        <!-- Left Vertical Bar Icon -->
+
         <button class="icon-btn" [attr.aria-label]="category.title">
           <i [class]="category.icon"></i>
         </button>
     
         
-        <!-- Flyout Panel (Visible on Hover via CSS) -->
+     
         <div class="flyout-panel">
           <h4 class="flyout-title">{{ category.title }}</h4>
           <ul class="flyout-list">
-            <!-- Nested loop for subItems -->
+          
             @for (item of category.subitem; track item.id) {
               <li>
                 <a href='#' class="flyout-link">
                   {{ item.label}}
                 </a>
               </li>
-
-            
+           
             } @empty {
               <li class="empty-item">No sub-categories</li>
             }

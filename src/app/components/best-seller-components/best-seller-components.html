@@ -1,0 +1,52 @@
+<section class="container-xl py-4 px-3 px-md-4">
+  <h2 class="fw-bold title-color mb-1">Best Sellers</h2>
+  <p class="text-muted-blue mb-4">Special products in this month.</p>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
+
+    @for (products of product; track product.id) {
+
+        
+      <div class="col">
+
+        <div class="product-card">
+          <span class="badge-discount">-{{ product.discount }}%</span>
+
+          <div class="card-actions">
+            <button type="button"><i class="bi bi-lightning-charge-fill"></i></button>
+            <button type="button"><i class="bi bi-heart-fill"></i></button>
+            <button type="button"><i class="bi bi-arrow-left-right"></i></button>
+            <button type="button"><i class="bi bi-eye-fill"></i></button>
+          </div>
+
+          <div class="product-img">
+            <img [src]="product.image" [alt]="product.name" />
+          </div>
+
+          <small class="brand">{{ product.brand }}</small>
+          <h3 class="name">{{ product.name }}</h3>
+
+          <div class="rating">
+            <span class="stars">{{ '★'.repeat(product.rating) }}</span>
+            <span class="reviews">({{ product.reviews }})</span>
+          </div>
+
+          <div class="price">
+            <span class="price-now">${{ product.price }}</span>
+            <del class="price-old">${{ product.oldPrice }}</del>
+          </div>
+
+          <button type="button" class="btn-cart">Add To Cart</button>
+
+          <ul class="features">
+            @for (f of product.features; track f) {
+              <li>{{ f }}</li>
+            }
+          </ul>
+        </div>
+
+      </div>
+    }
+
+  </div>
+</section>

@@ -1,33 +1,47 @@
 <!-- Top full-width navbar -->
 <app-navbar-component></app-navbar-component>
 
-<!-- Main body layout container -->
 <div class="app-layout">
-  <!-- Far Left Vertical Sidebar -->
   <app-sidebar-components [categories]="sidebarCategories"></app-sidebar-components>
 
-
-  <!-- Hero & Main Page Content -->
   <main class="hero-container">
-    
-    <div class="slider-section">
 
-    <app-slider-compoents></app-slider-compoents>
+    <!-- Hero row: slider (left) + 2 ads (right) -->
+    <section class="container-xl px-3 px-md-4 mt-3">
+      <div class="row g-3">
 
-    </div>
+        <div class="col-12 col-lg-8 col-xl-8">
+          <app-slider-compoents></app-slider-compoents>
+        </div>
 
-        <div class="child-card d-flex flex-col">
+        <div class="col-12 col-lg-4 col-xl-4">
+          <div class="row g-3 h-100">
 
-            <div class="ad-card-1">
-
-                
-
-
+            <div class="col-12 col-sm-6 col-lg-12">
+              <div class="ad-img">
+                <img src="/assets/image/banner4.png" alt="Apple Watch offer" />
+                <a href="#" class="shop-btn">Shop now <span class="arrow"></span></a>
+              </div>
             </div>
 
+            <div class="col-12 col-sm-6 col-lg-12">
+              <div class="ad-img">
+                <img src="/assets/image/banner5.png" alt="Apple devices offer" />
+                <a href="#" class="shop-btn">Shop now <span class="arrow"></span></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
 
       </div>
+    </section>
 
+    <!-- Featured categories -->
+   <app-categories-compoennts></app-categories-compoennts>
 
+   <app-best-seller-components [product]="bestSellers"></app-best-seller-components>
 
-</main>
+   
+  </main>
+</div>
