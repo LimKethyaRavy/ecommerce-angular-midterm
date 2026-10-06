@@ -1,0 +1,237 @@
+<section class="container-xl py-4 px-3 px-md-4">
+  <div class="section-head d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+    <div>
+      <h2 class="fw-bold title-color mb-1">Latest Deals</h2>
+      <p class="text-muted-blue mb-0">Special products in this month.</p>
+    </div>
+    <ul class="filter-tabs list-unstyled d-flex gap-4 mb-0">
+      <li><a href="#" class="active">View All</a></li>
+    </ul>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-12 col-lg-4">
+      <div class="offer-card">
+        <span class="ribbon">Hurry Up!</span>
+
+        <div id="offerCarousel" class="carousel slide offer-carousel" data-bs-ride="carousel">
+          <div class="offer-img">
+            <img [src]="featureDeal.images[currentSlide]" [alt]="featureDeal.name" />
+          </div>
+
+          <div class="dots">
+            @for (img of featureDeal.images; track img; let i = $index) {
+              <button
+                type="button"
+                class="dot"
+                [class.active]="i === currentSlide"
+                (click)="goTo(i)"
+              ></button>
+            }
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h3 class="offer-title">Special Offer</h3>
+          <p class="text-muted-blue">Remains until the end of the offer</p>
+
+          <div class="countdown d-flex justify-content-center align-items-start gap-2">
+            <div>
+              <span class="box">{{ timeLeft().day }}</span
+              ><small>Day</small>
+            </div>
+            <b>:</b>
+            <div>
+              <span class="box">{{ timeLeft().hours }}</span
+              ><small>Hour</small>
+            </div>
+            <b>:</b>
+            <div>
+              <span class="box">{{ timeLeft().minutes }}</span
+              ><small>Min</small>
+            </div>
+            <b>:</b>
+            <div>
+              <span class="box">{{ timeLeft().seconds }}</span
+              ><small>Sec</small>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <small class="brand">{{ featureDeal.brand }}</small>
+        <h3 class="offer-name">{{ featureDeal.name }}</h3>
+
+        <div class="rating">
+          <span class="stars">{{ '★'.repeat(featureDeal.rating) }}</span>
+          <span class="reviews">({{ featureDeal.reviews }})</span>
+        </div>
+
+        <div class="price">
+          <span class="price-now big">${{ featureDeal.price }}</span>
+          <del class="price-old">${{ featureDeal.oldPrice }}</del>
+        </div>
+
+        <div class="stock-bar">
+          <div
+            class="fill"
+            [style.width.%]="(featureDeal.sold / (featureDeal.available + featureDeal.sold)) * 100"
+          ></div>
+        </div>
+        <div class="d-flex justify-content-between stock-text">
+          <span
+            >Available:<b>{{ featureDeal.available }}</b></span
+          >
+          <span
+            >Sold:<b>{{ featureDeal.sold }}</b></span
+          >
+        </div>
+
+        <hr />
+
+        <ul class="features">
+          @for (f of featureDeal.features; track f) {
+            <li>{{ f }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-8">
+      <div class="row g-3">
+        @for (product of lastestDeal.slice(0,6); track product.id) {
+          <div class="col-12 col-sm-6 col-xl-4">
+            <div class="product-card">
+              <span class="badge-discount">-{{ product.discount }}%</span>
+
+              <div class="card-actions">
+                <button type="button"><i class="fa-solid fa-heart"></i></button>
+              </div>
+
+              <div class="description">
+                <div class="product-img">
+                  <img [src]="product.image" [alt]="product.name" />
+                </div>
+                <small class="brand">{{ product.brand }}</small>
+                <h3 class="name">{{ product.name }}</h3>
+                <div class="rating">
+                  <span class="stars">{{ '★'.repeat(product.rating) }}</span>
+                  <span class="reviews">({{ product.reviews }})</span>
+                </div>
+                <div class="price">
+                  <span class="price-now">${{ product.price }}</span>
+                  <del class="price-old">${{ product.oldPrice }}</del>
+                </div>
+              </div>
+
+              <div class="main-btn">
+                <button type="button" class="btn-cart">Add To Cart</button>
+              </div>
+
+              <!-- <ul class="features">
+                <li>{{ product.features[0] }}</li>
+              </ul> -->
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container py-3">
+  <div class="row g-3 p-2">
+    @for (product_under of lastestDeal.slice(7, 11); track product_under.id) {
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="product-card">
+          
+ 
+          <span class="badge-discount">-{{product_under.discount }}%</span>
+
+           <div class="card-actions">
+                <button type="button"><i class="fa-solid fa-heart"></i></button>
+              </div>
+
+        
+          <div class="product-img">
+            <img [src]="product_under.image" [alt]="product_under.name" />
+          </div>
+
+    
+          <div class="product-body">
+            <div class="brand">{{ product_under.brand }}</div>
+            <h3 class="name">{{ product_under.name }}</h3>
+
+            <div class="rating">
+              <span class="stars">{{ '★'.repeat(product_under.rating) }}</span>
+              <span class="reviews">({{ product_under.reviews }})</span>
+            </div>
+
+            <div class="price">
+              <span class="price-now">${{ product_under.price }}</span>
+              <del class="price-old">${{product_under.oldPrice }}</del>
+            </div>
+          </div>
+
+        
+          <div class="main-btn">
+            <button type="button" class="btn-cart">Add To Cart</button>
+          </div>
+
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+<section class="container-xl py-4 px-3 px-md-4">
+  <div class="row g-3">
+
+    <!-- LEFT: tall card -->
+    <div class="col-12 col-lg-4">
+      <div class="promo-card promo-tall">
+        <img src="/assets/image/category-img/xBoxBanner.png" alt="Microsoft Xbox Series S" />
+        <a href="#" class="shop-btn shop-orange pos-tall">Shop Now <span class="arrow"></span></a>
+      </div>
+    </div>
+
+    <!-- RIGHT: 4 cards -->
+    <div class="col-12 col-lg-8">
+      <div class="row g-3">
+
+        <div class="col-12 col-md-7">
+          <div class="promo-card">
+            <img src="/assets/image/category-img/ControllerBanner.png" alt="Xbox Core Wireless Controller" />
+            <a href="#" class="shop-btn shop-teal pos-controller">Shop Now <span class="arrow"></span></a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5">
+          <div class="promo-card">
+            <img src="/assets/image/category-img/VrBanner.png" alt="Metaverse" />
+
+             <a href="#" class="shop-btn shop-teal pos-controller">Shop Now <span class="arrow"></span></a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5">
+          <div class="promo-card">
+            <img src="/assets/image/category-img/Special.png" alt="Electronic" />
+                        <a href="#" class="shop-btn shop-orange pos-discount">Shop Now <span class="arrow"></span></a>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7">
+          <div class="promo-card">
+            <img src="/assets/image/category-img/DiscountBanner.jpg" alt="Super discount" />
+            <a href="#" class="shop-btn shop-orange pos-discount">Shop Now <span class="arrow"></span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -6,9 +6,10 @@ import { JsonPipe } from '@angular/common';
 import { SliderCompoents } from '../../components/slider-compoents/slider-compoents';
 import { CategoriesCompoennts } from '../../components/categories-compoennts/categories-compoennts';
 import { BestSellerComponents } from '../../components/best-seller-components/best-seller-components';
+import { LastestProducts } from '../../components/lastest-products/lastest-products';
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, SidebarComponents, SliderCompoents, CategoriesCompoennts, BestSellerComponents],
+  imports: [NavbarComponent, SidebarComponents, SliderCompoents, CategoriesCompoennts, BestSellerComponents, LastestProducts],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -296,6 +297,178 @@ export class Home {
   },
 ];
 
+ latestDeal = [
+  {
+     
+    id: 11,
+    brand: 'PlayStation',
+    name: 'PlayStation 5 pro slim',
+    image: '/assets/image/category-img/ps5.png',
+    price: 1280,
+    oldPrice: 1300,
+    discount: 20,
+    rating: 5,
+    reviews: 65,
+ 
+  },
+  {
+    id: 12,
+    brand: 'Asus Rog',
+    name: 'Asus rog scar 2026 high performace graphic card',
+    image: '/assets/image/category-img/Rogpng.png',
+    price: 154.3,
+    oldPrice: 162.5,
+    discount: 17,
+    rating: 5,
+    reviews: 65,
+  
+  },
+  {
+    id: 13,
+    brand: 'Keychron',
+    name: 'Keychron Q1 Max QMK/VIA Wireless Custom Mechanical Keyboard',
+    image: '/assets/image/category-img/Keychron-Q1-Max-QMK-VIA-Wireless-Custom-Mechanical-Keyboard-75_-Layout-Aluminum-Black-Fully-Assembled-Knob-for-Mac-Windows-Linux-Gateron-Jupiter-Brown.png',
+    price: 229.99,
+    oldPrice: 280,
+    discount: 17,
+    rating: 5,
+    reviews: 65,
+  
+  },
+  {
+    id: 14,
+    brand: 'Apple',
+    name: 'Apple Watch Series 8 [GPS 45mm] Smart Watch',
+    image: '/assets/image/category-img/Smartwatch.png',
+    price: 530.3,
+    oldPrice: 560.6,
+    discount: 17,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+  {
+    id: 15,
+    brand: 'Meta Quest VR',
+    name: 'Meta quest VR 128 GB bring the world closer',
+    image: '/assets/image/category-img/Digital-Realm-Quest-Experience-PNG.png',
+    price: 530.3,
+    oldPrice: 560.6,
+    discount: 17,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+  {
+    id: 16,
+    brand: 'Starlight Mouse',
+    name: 'Final Mouse ULX Prophecy starlight',
+    image: '/assets/image/category-img/clix_1_square_complete_1_1.png',
+    price: 179.99,
+    oldPrice: 230,
+    discount: 17,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+    {
+    id: 17,
+    brand: 'Samsung Airconditioner',
+    name: 'Samsung airconditioner comfort',
+    image: '/assets/image/category-img/AR40F12D0AGAF-FRONT.png',
+    price: 179.99,
+    oldPrice: 230,
+    discount: 17,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+    {
+    id: 18,
+    brand: 'Samsung Airconditioner',
+    name: 'Samsung airconditioner comfort',
+    image: '/assets/image/category-img/AR40F12D0AGAF-FRONT.png',
+    price: 320,
+    oldPrice: 340,
+    discount: 20,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+    {
+    id: 19,
+    brand: 'GoPro',
+    name: 'Gopro Hero 13 body camera',
+    image: '/assets/image/category-img/03-pdp-h13-gallery-768-375.png',
+    price: 520.00,
+    oldPrice: 540,
+    discount: 20,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+    {
+    id: 20,
+    brand: 'Sony Microphone',
+    name: 'Sony Microphone series x',
+    image: '/assets/image/category-img/pngtree-podcast-mic-png-image_16279107.png',
+    price: 450,
+    oldPrice: 480,
+    discount: 30,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+  {
+    id: 21,
+    brand: 'Samsung Washer',
+    name: 'SAMSUNG FRONT LOAD WASHER 10KG (WW10DB7U94GBST)',
+    image: '/assets/image/category-img/38433-washing-machine.png',
+    price: 585.00,
+    oldPrice: 615,
+    discount: 5,
+    rating: 5,
+    reviews: 65,
+  
+  },
+
+ 
+ ]
+
+ featureDeal = {
+  
+    id: 1,
+  brand: 'Apple',
+  name: '2022 Apple iMac Retina 5K Display',
+  images: [
+    '/assets/image/category-img/Pc.png',
+    '/assets/image/category-img/Rogpng.png',
+    '/assets/image/category-img/Smartwatch.png',
+  ],
+  price: 2856.3,
+  oldPrice: 3225.6,
+  rating: 5,
+  reviews: 65,
+  available: 568,
+  sold: 289,
+  features: [
+    '27-inch (diagonal) Retina 5K display',
+    '3.1GHz 6-core 10th-generation Intel Core i5',
+    'AMD Radeon Pro 5300 graphics',
+  ],
+  }
+  
 }
+  
+ 
+
+
 
   
