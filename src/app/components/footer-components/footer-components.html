@@ -1,1 +1,99 @@
-<p>footer-components works!</p>
+<!-- Newsletter strip -->
+<section class="newsletter">
+  <div class="container-xl px-3 px-md-4">
+    <div class="row align-items-center g-4">
+
+      <div class="col-12 col-lg-5">
+        <h2 class="news-title">Subscribe &amp; Get <span>10%</span> Discount</h2>
+        <p class="news-sub mb-0">
+          Get E-mail updates about our latest shop and <b>special offers.</b>
+        </p>
+      </div>
+
+      <div class="col-12 col-lg-4">
+        <div class="subscribe-box d-flex">
+          <input type="email" placeholder="Your email Address" />
+          <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div class="col-lg-3 d-none d-lg-block text-end">
+        <img src="/assets/image/footer/devices.png" alt="Apple devices" class="news-img" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer links -->
+<footer class="footer-main">
+  <div class="container-xl px-3 px-md-4">
+    <div class="row g-4">
+
+      <!-- Contact -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h3 class="f-title">Contact</h3>
+        <p class="f-text"><b>Address:</b> 502 New Design Str, Melbourne, San Francisco, CA 94110, United States</p>
+        <p class="f-text"><b>Phone:</b> (+01) 123-456-789</p>
+        <p class="f-text"><b>E-mail:</b> contact&#64;ecom-market.com</p>
+        <p class="f-text"><b>Hours:</b> 8:00 - 17:00, Mon - Sat</p>
+
+        <div class="socials d-flex gap-2 mt-4">
+          @for (s of socials; track s.id) {
+            <a href="#" class="social-btn"><i [class]="s.icon"></i></a>
+          }
+        </div>
+      </div>
+
+      <!-- Make Money with Us -->
+      <div class="col-6 col-sm-4 col-lg-2">
+        <h3 class="f-title">Make Money with Us</h3>
+        <ul class="f-links list-unstyled">
+          @for (item of makeMoney; track item) {
+            <li><a href="#">{{ item }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-sm-4 col-lg-2">
+        <h3 class="f-title">Company</h3>
+        <ul class="f-links list-unstyled">
+          @for (item of company; track item) {
+            <li><a href="#">{{ item }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- My account -->
+      <div class="col-6 col-sm-4 col-lg-2">
+        <h3 class="f-title">My account</h3>
+        <ul class="f-links list-unstyled">
+          @for (item of account; track item) {
+            <li><a href="#">{{ item }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- App & Payment -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h3 class="f-title">App &amp; Payment</h3>
+        <p class="f-text">Download our Apps and get extra 15% Discount on your first Order...!</p>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <a href="#"><img src="/assets/image/footer/appstore.png" alt="App Store" class="store-img" /></a>
+          <a href="#"><img src="/assets/image/footer/googleplay.png" alt="Google Play" class="store-img" /></a>
+        </div>
+
+        <p class="f-text mb-2">Secured Payment Gateways</p>
+        <img src="/assets/image/category-img/unnamed.png" alt="Payment methods" class="pay-img" />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- back to top -->
+  <button type="button" class="to-top" (click)="scrollTop()" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</footer>

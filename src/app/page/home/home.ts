@@ -7,9 +7,10 @@ import { SliderCompoents } from '../../components/slider-compoents/slider-compoe
 import { CategoriesCompoennts } from '../../components/categories-compoennts/categories-compoennts';
 import { BestSellerComponents } from '../../components/best-seller-components/best-seller-components';
 import { LastestProducts } from '../../components/lastest-products/lastest-products';
+import { FooterComponents } from '../../components/footer-components/footer-components';
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, SidebarComponents, SliderCompoents, CategoriesCompoennts, BestSellerComponents, LastestProducts],
+  imports: [NavbarComponent, SidebarComponents, SliderCompoents, CategoriesCompoennts, BestSellerComponents, LastestProducts, FooterComponents],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
