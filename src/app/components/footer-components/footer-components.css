@@ -130,6 +130,10 @@
   transition: background 0.2s;
 }
 
+.device-ad {
+  height: 100%;
+}
+
 .social-btn:hover { background: #3d5a8c; }
 
 /* app + payment images */
@@ -163,3 +167,5 @@
   .footer-main { padding: 40px 0; }
   .f-title { font-size: 18px; margin-bottom: 16px; }
 }
+
+/* hide the sidebar on phones and small tablets */
