@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer-components.css',
 })
 export class FooterComponents {
-   makeMoney = ['Mission & Vision', 'Our Team', 'Careers', 'Press & Media', 'Advertising', 'Testimonials'];
+  makeMoney = ['Mission & Vision', 'Our Team', 'Careers', 'Press & Media', 'Advertising', 'Testimonials'];
   company = ['Our Blog', 'Plans & Pricing', 'Knowledge Base', 'Cookie Policy', 'Office Center', 'News & Events'];
   account = ['FAQs', 'Editor Help', 'Community', 'Live Chatting', 'Contact Us', 'Support Center'];
 
