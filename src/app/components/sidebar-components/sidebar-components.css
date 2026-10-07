@@ -1,4 +1,4 @@
-/* Container for the narrow sidebar */
+
 .sidebar-container {
   width: 50px;
   background-color: #ffffff;
@@ -14,7 +14,7 @@
   gap: 12px;
 }
 
-/* Outer Item Wrapper (Anchor point for positioning) */
+
 .icon-item {
   position: relative;
   width: 100%;
@@ -31,7 +31,7 @@
     color: blue;
 }
 
-/* Main Icon Button */
+
 .icon-btn {
   background: transparent;
   border: none;
@@ -48,12 +48,12 @@
   background-color: #f0f4ff;
 }
 
-/* Flyout Submenu Panel */
+
 .flyout-panel {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
   top: 0;
-  left: 100%; /* Anchor directly to the right edge of the icon bar */
+  left: 100%; 
   width: 200px;
   background-color: #ffffff;
   border: 1px solid #e9ecef;
@@ -63,12 +63,11 @@
   z-index: 1000;
 }
 
-/* Show flyout on hover */
+
 .icon-item:hover .flyout-panel {
   display: block;
 }
 
-/* Header & Sub-item Links inside Flyout */
 .flyout-title {
   font-size: 0.85rem;
   font-weight: 700;

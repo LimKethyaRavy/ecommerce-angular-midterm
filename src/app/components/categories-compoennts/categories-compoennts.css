@@ -138,7 +138,10 @@
   transition: transform 0.2s, filter 0.2s;
 }
 
-.learn-btn:hover { transform: translateY(-2px); filter: brightness(0.92); }
+.learn-btn:hover { 
+  transform: translateY(-2px); 
+  filter: brightness(0.92); 
+}
 
 
 .learn-link {
@@ -170,7 +173,7 @@
   .promo-card { height: 230px; }
 }
 
-/* phones */
+
 @media (max-width: 575.98px) {
   .promo-card { height: 210px; }
   .learn-btn { padding: 7px 16px; font-size: 12px; }
